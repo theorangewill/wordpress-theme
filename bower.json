@@ -1,0 +1,22 @@
+{
+  "name": "website",
+  "homepage": "https://github.com/theorangewill/website",
+  "authors": [
+    "William Felipe <theorangewill@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.4.1",
+    "font-awesome": "^5.13.1",
+    "breakpoint-sass": "^2.7.1"
+  }
+}
