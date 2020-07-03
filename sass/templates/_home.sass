@@ -1,2 +1,26 @@
-.slide
-    width: 100%
+@import organisms/categories
+@import organisms/postcard
+
+
+body
+    background-image: radial-gradient(circle, #7d7d7d 1px, transparent 0)
+    background-color: #4f4f4f 
+    background-size: 6px 6px
+
+    .pagination
+        justify-content: center
+        .page-item
+            .page-link
+                color: $color1darker
+                &:hover
+                    background-color: $color1
+                    border-color: $color1darker
+                    color: #fff
+            &.disabled 
+                .page-link
+                    color: $color1darker
+            &.active 
+                .page-link
+                    background-color: $color1
+                    border-color: $color1darker
+                    color: #fff

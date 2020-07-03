@@ -1,0 +1,130 @@
+@import ../../node_modules/bootstrap/scss/card
+
+.post-card-title-default
+    @extend .card-title
+    margin: 0px
+    font-size: 2vw
+    text-shadow: 2px 2px 5px white
+    +breakpoint(($smartphone, $tiny))
+        font-size: 4vw
+    +breakpoint($tablet)
+        font-size: 3vw
+    font-weight: $bold
+    color: black
+
+.post-card-subtitle-default
+    @extend .card-subtitle
+    padding-top: 4px
+    font-family: $second-font
+    font-size: 0.7em
+    +breakpoint(($smartphone, $tiny))
+        font-size: 0.4em
+    text-align: right
+    color: black
+
+.post-card-text-default
+    @extend .card-text
+    +breakpoint(($smartphone, $tiny))
+        display: none
+    line-height: 15px
+    padding-top: 5px
+    text-align: justify
+    text-justify: inter-word
+    font-weight: $light
+    color: rgba(0, 0, 0, 0.6)
+
+.post-card-default
+    margin: 10px
+    max-width: 300px
+    position: relative
+    +breakpoint(($smartphone, $tiny))
+        width: 150px
+    &:hover
+        +transition(.3s)
+        opacity: 0.7
+
+.post-card-category-default
+    position: absolute
+    font-family: $second-font
+    font-size: 0.7em
+    bottom: 0px
+    right: 5px
+    +breakpoint(($smartphone, $tiny))
+        display: none
+    span
+        background: rgba(0, 0, 0, 0.7)
+        color: white
+
+.posts-catalog
+    @extend .card-columns
+    column-count: 4
+    +breakpoint($tablet)
+        column-count: 2
+    +breakpoint(($smartphone, $tiny))
+        column-count: 1
+    margin-left: 100px
+    margin-right: 100px
+    margin-top: 50px
+    margin-bottom: 25px
+    .post-card
+        @extend .card
+        @extend .post-card-default
+        .post-card-header
+            position: relative
+            .post-card-img
+                @extend .card-img-top
+                width: 100%
+                height: 150px
+                object-fit: cover
+            .post-card-category
+                @extend .post-card-category-default
+        .post-card-body
+            @extend .card-body
+            padding-top: 2px
+            padding-left: 10px
+            padding-right: 5px
+            .post-card-content
+                .post-card-title
+                    @extend .post-card-title-default
+                .post-card-subtitle
+                    @extend .post-card-subtitle-default
+                .post-card-text
+                    @extend .post-card-text-default
+
+    .post-card2
+        @extend .card
+        @extend .post-card-default
+        .post-card-header
+            position: relative
+            .post-card-img
+                @extend .card-img
+                width: 100%
+                min-height: 200px
+                +breakpoint(($smartphone, $tiny))
+                    min-height: 150px
+                object-fit: cover
+            .post-card-category
+                @extend .post-card-category-default
+                top: 10px
+                right: 5px
+        .post-card-body
+            @extend .card-img-overlay
+            padding: 0
+            .post-card-content
+                position: absolute
+                bottom: 0px
+                padding-bottom: 4px
+                width: 100%
+                .post-card-title
+                    @extend .post-card-title-default
+                    color: white
+                    text-align: right
+                    text-shadow: 2px 2px 5px black
+                .post-card-subtitle
+                    @extend .post-card-subtitle-default
+                    text-align: left
+                    color: white
+                    left: 10px
+                .post-card-text
+                    @extend .post-card-text-default
+                    background: rgba(176, 176, 176, 0.6)

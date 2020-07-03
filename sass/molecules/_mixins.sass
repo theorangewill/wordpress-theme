@@ -1,19 +1,23 @@
 /* ======== Cores */
-$preto: #000
-$branco: white
-$azul: #31b1e7
-$azul-claro: #cadbdc
-$laranja: orange
-$verde: #9ad15e
-$cinza-claro: #e1e1e1
 
 /* ======== Font */
 $light: 300
-$regular: 400
+$normal: 400
 $bold: 700
 
-$celular: max-width 440px
-$tablet: max-width 991px
+/* Media Breakpoints */
+$tiny: max-width 319px
+$smartphone: 320px 480px
+$tablet: 481px 768px
+$small: 769px 1024px
+
+$first-font: 'Roboto'
+$second-font: 'Montserrat'
+
+$color1: #c24e00
+$color1darker:  #a74503
+$color1darker2: #963d02
+$color1lighter: #fc6600
 
 =flexbox
   display: -webkit-box
@@ -22,7 +26,7 @@ $tablet: max-width 991px
   display: -ms-flexbox
   display: flex
 
-=gradient($angle,$gradient1, $gradient2)
+=gradient($angle, $gradient1, $gradient2)
   background-color: $gradient2 
   background-image: -webkit-gradient(linear, $angle, from($gradient1), to($gradient2))
   background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2)
@@ -45,23 +49,10 @@ $tablet: max-width 991px
   -ms-border-radius: $radius
   border-radius: $radius
 
-@function calculateRem($size) 
-  $remSize: $size / 16px
-  @return $remSize * 1rem
-
-=font-size($size) 
-  font-size: $size
-  font-size: calculateRem($size)
-
 =opacity($opacity) 
   opacity: $opacity
   $opacity-ie: $opacity * 100
   filter: alpha(opacity=$opacity-ie)
-
-/* ======== Background Color Opacity */
-=background-opacity($color: #000, $opacity: 0.85) 
-  background: $color
-  background: rgba($color, $opacity)
 
 /* ======== Columns */
 =columns($count: 3, $gap: 10) 
