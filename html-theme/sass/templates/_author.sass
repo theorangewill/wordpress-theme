@@ -1,0 +1,135 @@
+@import organisms/pagination
+@import molecules/tag
+@import organisms/background
+
+.author-thing
+    .author-thing-header
+        height: 2rem
+        width: 100%
+        text-align: center
+        background-image: url('../../images/decorated-line.png')
+        background-size: cover
+        .author-thing-title
+            display: inline-block
+            witdh: 100%
+            .author-thing-name
+                display: inline
+                font-size: 1.8rem
+                color: var(--cobjectdark)
+            .author-thing-question
+                display: inline
+                i
+                    font-size: 1rem
+                    color: var(--cobjectdark)
+                    &:hover
+                        color: var(--cprimarydark)
+    .author-thing-list
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        justify-content: center
+        .author-thing-item
+            flex-basis: auto
+            padding: 1rem
+            .author-thing-item-icon
+                width: 4rem
+                height: 4rem
+    .author-thing-set
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        justify-content: center
+        .author-thing-element
+            flex-basis: auto
+            padding: 1rem
+            .author-thing-element-icon
+                width: 4rem
+                height: 4rem
+            .author-thing-element-progress
+                height: 0.5rem
+                .progress-bar
+                    background-color: var(--cprimarydark)
+    .author-categories
+        .author-category
+            @extend .tag-default
+    .author-posts
+        padding-top: 1rem 
+        display: flex
+        flex-direction: column
+        width: 50%
+        margin: 0 auto
+        .author-post
+            display: block
+            padding: 5px
+            color: var(--cpostfont) !important
+            &:hover
+                color: var(--cprimarydark) !important
+            border-bottom: 1px solid var(--cfont)
+            &:first-child
+                border-top: 1px solid var(--cfont)
+                
+
+.body-container
+    @extend background-default
+    .main-container
+        .author-content
+            margin: 1rem auto
+            width: 80%
+            min-height: 400px
+            .author-header
+                margin: 0 3rem
+                background-color: var(--cbackground)
+                border-top-right-radius: 20px
+                border-top-left-radius: 20px
+                .author-name
+                    font-size: 3rem
+                    text-shadow: 2px 2px 5px var(--cdefault)
+                    color: var(--cprimarydark)
+                    text-align: center
+
+                .author-container
+                    display: flex
+                    align-items: center
+                    +breakpoint($breakpoint-md)
+                        flex-direction: column
+                    .author-decription
+                        flex-basis: 70%
+                        padding: 0.2rem 2rem
+                        text-align: justify
+                    .author-box
+                        flex-basis: 30%
+                        display: flex
+                        flex-direction: column
+                        padding: 1rem
+                        text-align: center 
+                        .author-pic
+                            width: 100%
+                            object-fit: cover                       
+                            +breakpoint($breakpoint-md)
+                                height: 10rem
+                                object-position: 50% 50%
+                            margin: 0 auto
+                        .author-email
+                            width: 100%
+                            object-fit: contain
+                            margin: 0 auto
+                        .author-links
+                            margin: 0 auto
+                            font-size: 1.5rem
+                            i
+                                +transition(1s)
+                                &:hover
+                                    color: var(--cprimary)
+
+            .author-body
+                background-color: var(--cpostbackground)
+                border-radius: 20px
+                padding-top: 20px
+                padding-bottom: 10px
+                text-align: center
+                .author-interests
+                    @extend .author-thing
+                .author-technicalknowledgement
+                    @extend .author-thing
+                .author-publications
+                    @extend .author-thing

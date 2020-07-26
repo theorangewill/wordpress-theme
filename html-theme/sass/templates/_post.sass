@@ -1,0 +1,249 @@
+@import ../organisms/sidebar
+@import ../organisms/comments
+@import ../organisms/report-modal
+@import ../organisms/main-header
+@import ../molecules/tag
+@import ../molecules/share-popover
+@import organisms/background
+
+    
+.body-container
+    @extend background-default
+    .main-container
+        margin-bottom: 3rem
+        .main-header-category
+            @extend .tag-default      
+            position: absolute
+            top: 0
+            left: 0
+            margin: 0.3rem
+        .post-report
+            display: none
+        .post-sidebar-left
+            @extend .sidebar-default
+            float: left
+            +breakpoint(max-width 190px)
+                display: none
+            .post-sidebar-content
+                direction: rtl
+                left: -10rem
+                &.ativo
+                    left: 0px
+                .post-sidebar-circle
+                    left: 10rem
+                    border-top-right-radius: 50%
+                    border-bottom-right-radius: 50%
+                    border-left: none
+                .post-sidebar-contents-title
+                    border-top-right-radius: 10px
+                .post-sidebar-contents-list
+                    width: 10rem
+                    border-bottom-right-radius: 10px
+                    .post-sidebar-contents-item
+                        direction: ltr
+
+        .post-sidebar-right
+            @extend .sidebar-default
+            +breakpoint(max-width 260px)
+                display: none
+            .post-sidebar-content
+                right: -20rem
+                +breakpoint($breakpoint-smartphone)
+                    right: -15rem
+                &.ativo
+                    right: 0px
+                .post-sidebar-circle
+                    right: 20rem
+                    +breakpoint($breakpoint-smartphone)
+                        right: 15rem
+                    border-top-left-radius: 50%
+                    border-bottom-left-radius: 50%
+                    border-right: none
+                .post-sidebar-contents-title
+                    border-top-left-radius: 10px
+                .post-sidebar-contents-list
+                    width: 20rem
+                    +breakpoint($breakpoint-smartphone)
+                        width: 15rem
+                    border-bottom-left-radius: 10px
+
+        .post-content
+            width: 80%
+            margin: 0px auto
+            .post-body
+                position: relative
+                background-color: var(--cpostbackground)
+                align: center
+                padding: 0
+                border-bottom-left-radius: 50px
+                border-bottom-right-radius: 50px
+                .post-text
+                    text-align: justify
+                    padding: 1rem 5rem 5rem 5rem
+                    +breakpoint($breakpoint-smartphone)
+                        padding: 1rem 2rem 2rem 2rem
+                    color: var(--cpostfont) !important
+                    p
+                        color: var(--cpostfont) !important
+                    a
+                        text-decoration: underline
+                .post-next
+                    position: fixed
+                    top: 20rem
+                    right: 5%
+                    .post-next-icon
+                        font-size: 3rem
+                        color: var(--cfont)
+                        +breakpoint($breakpoint-smartphone)
+                            right: 0%
+                        &:hover
+                            color: var(--cprimary)
+                .post-prev
+                    position: fixed
+                    top: 20rem
+                    left: 5%
+                    .post-prev-icon
+                        font-size: 3rem
+                        color: var(--cfont)
+                        +breakpoint($breakpoint-smartphone)
+                            left: 0%
+                        &:hover
+                            color: var(--cprimary)
+                .post-actions
+                    position: absolute
+                    bottom: 10px
+                    right: 30px
+                    font-size: 2em
+                    .post-action-report
+                        display: inline
+                        i
+                            &:hover
+                                color: var(--cprimary)
+                            color: var(--cobject)
+                    .post-action-share
+                        display: inline
+                        i
+                            &:hover
+                                color: var(--cprimary)
+                            color: var(--cobject)
+                        .popover
+                            max-width: 2.5rem
+                            padding: 0.4rem
+                            margin: 0px
+                            box-shadow: 0px 0px 5px var(--cprimary)
+                            .popover-body
+                                padding: 0px
+                                margin: 0px
+                                .post-share-popover
+                                    @extend .share-popover-default
+
+            .post-footer-content
+                width: 70%
+                margin: 0px auto
+                .post-references
+                    background-color: var(--cobject)
+                    padding: 0
+                    border-bottom-left-radius: 20px
+                    border-bottom-right-radius: 20px
+                    .post-references-title
+                        &.ativo
+                            border-bottom-left-radius: 0px
+                            border-bottom-right-radius: 0px
+                        border-bottom-left-radius: 10px
+                        border-bottom-right-radius: 10px
+                        background-color: var(--cobjectdark)
+                        padding: 0.3rem 1rem
+                        margin: 0px
+                        font-size: 0.8rem
+                        color: var(--cobjectdarkfont)
+                        +transition(1s)
+                    .post-references-text
+                        +transition(1s)
+                        text-align: justify
+                        line-height: 1rem
+                        padding: 0.3rem 1rem 0.3rem 1rem
+                        font-family: $font-second
+                        font-size: 0.7em
+                        color: var(--cobjectfont) !important
+                        margin: 0
+                        opacity: 0
+                        max-height: 0px
+                        overflow: hidden
+                        &.ativo
+                            opacity: 1
+                            max-height: 1000px
+                        p
+                            color: var(--cobjectfont)
+
+                .post-footer
+                    background-color: var(--cfooter-background)
+                    align: center
+                    width: 80%
+                    margin: 0px auto 2rem auto
+                    border-bottom-left-radius: 20px
+                    border-bottom-right-radius: 20px
+                    padding: 0.3rem 0.3rem
+                    height: auto
+                    border-style: solid
+                    border-width: 0px 1px 1px 1px
+                    border-color: gray
+                    box-shadow: 0px 5px 15px white
+                    .post-tags
+                        text-align: center
+                        .post-tag
+                            @extend .tag-default
+                    .post-footer-content
+                        display: flex
+                        flex-wrap: wrap
+                        justify-content: space-between
+                        margin: 0.5rem
+                        .post-author
+                            font-family: $font-second
+                            font-size: 0.7rem
+                            span
+                                font-weight: $bold
+                            a
+                            .popover
+                                +breakpoint($breakpoint-md)
+                                    display: none
+                                max-width: 500px
+                                max-height: 100px
+                                padding: 0px
+                                margin: 0px
+                                box-shadow: 0px 0px 5px var(--cprimary)
+                                .arrow
+                                    display: none
+                                .popover-body
+                                    width: 400px
+                                    height: 100px
+                                    padding: 0px
+                                    margin: 0px
+                                    background-color: var(--cobject)
+                                    .post-author-popover
+                                        height: inherit
+                                        .post-author-popover-image
+                                            float: left
+                                            height: 100px
+                                            width: 100px
+                                            object-fit: cover
+                                        .post-author-popover-text
+                                            float: right
+                                            width: 290px
+                                            display: inline
+                                            padding-top: 5px
+                                            padding-right: 5px
+                                            font-size: 1em
+                                            text-align: justify
+                                            color: var(--cobjectfont)
+                                            font-family: $font-second
+                        .post-date
+                            font-family: $font-second
+                            font-size: 0.8rem
+                            span
+                                font-weight: $bold
+                                display: inline
+                        .post-date-update
+                            left: 1rem
+                            font-size: 0.7em
+                
+                            

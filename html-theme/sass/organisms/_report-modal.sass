@@ -1,0 +1,27 @@
+@import ../../node_modules/bootstrap/scss/modal
+@import ../molecules/form
+
+.post-report
+    @extend .modal-content
+    position: relative
+    background-color: var(--cobject)
+    padding: 1rem
+    border-width: 1rem
+    border-color: rgba(255, 255, 255, 0.5)
+    .post-report-header
+        padding-bottom: 1rem
+        .post-report-title
+            color: black
+            text-align: center
+            font-size: 2rem
+            color: var(--cobjectfont)
+        .post-report-close
+            position: absolute
+            right: 0.6rem
+            top: 0.3rem
+            color: var(--cobjectfont) !important
+            font-size: 1.5rem
+            background: none
+            &:hover
+                color: var(--cprimarydark) !important
+    .post-report-body
