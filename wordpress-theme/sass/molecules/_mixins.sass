@@ -1,0 +1,73 @@
+/* == Font == */
+$light: 300
+$normal: 400
+$bold: 700
+$font-main: 'Roboto'
+$font-second: 'Montserrat'
+$first-font: 'Roboto'
+$second-font: 'Montserrat'
+
+/* == Media Breakpoints == */
+$tiny: max-width 319px
+$smartphone: 320px 480px
+$mid: 480px 560px
+$tablet: 481px 768px
+$small: 769px 1024px
+
+$breakpoint-tiny: max-width 319px
+$breakpoint-smartphone: max-width 480px
+$breakpoint-xs: 0
+$breakpoint-sm: max-width 576px
+$breakpoint-md: max-width 768px
+$breakpoint-lg: 992px
+$breakpoint-xl: 1200px
+
+/* == Colors == */
+$colorprimary: #ff7700
+
+
+=flexbox
+  display: -webkit-box
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flexbox
+  display: flex
+
+=gradient($angle, $gradient1, $gradient2)
+  background-color: $gradient2 
+  background-image: -webkit-gradient(linear, $angle, from($gradient1), to($gradient2))
+  background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:    -moz-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:     -ms-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:      -o-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:         linear-gradient($angle, $gradient1, $gradient2)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient1}', EndColorStr='#{$gradient2}')
+
+=gradient_three_points($angle, $gradient1, $gradient2, $gradient3)
+  background-color: $gradient3 
+  background-image: -webkit-gradient(linear, $angle, from($gradient2), to($gradient3))
+  background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2, $gradient3)
+  background-image:    -moz-linear-gradient($angle, $gradient1, $gradient2, $gradient3)
+  background-image:     -ms-linear-gradient($angle, $gradient1, $gradient2, $gradient3)
+  background-image:      -o-linear-gradient($angle, $gradient1, $gradient2, $gradient3)
+  background-image:         linear-gradient($angle, $gradient1, $gradient2, $gradient3)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient2}', EndColorStr='#{$gradient3}')
+
+  
+/* ======== Outros */
+=transition($transition...) 
+  -moz-transition:    all $transition linear
+  -o-transition:      all $transition linear
+  -webkit-transition: all $transition linear
+  transition:         all $transition linear
+
+=border-radius($radius) 
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+=opacity($opacity) 
+  opacity: $opacity
+  $opacity-ie: $opacity * 100
+  filter: alpha(opacity=$opacity-ie)

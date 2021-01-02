@@ -1,0 +1,30 @@
+@import organisms/category-card
+@import organisms/main-header
+@import organisms/background
+@import organisms/postcard
+@import organisms/pagination
+@import molecules/tag
+
+    
+.body-container
+    @extend background-default
+    .main-container
+        min-height: calc(50vh)
+    .main-header-categories   
+        position: absolute
+        top: 0
+        left: 0
+        margin: 0.3rem
+        text-align: center
+        .main-header-category
+            @extend .tag-default   
+            display: inline
+            margin: 0.1rem
+    .main-header-children   
+        margin: 0.3rem
+        text-align: center
+        .main-header-child
+            @extend .tag-default   
+            display: inline
+            margin: 0.1rem
+            font-size: 1rem

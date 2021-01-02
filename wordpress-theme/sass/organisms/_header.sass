@@ -1,0 +1,145 @@
+.header-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    background-color: var(--cheader-background)
+    border-bottom: 2px solid var(--cobjectdark)
+    .logo-container
+        width: 20%
+        flex-shrink: 1
+        .logo
+            display: block
+            width: 40px
+            margin: 0px 0px 0px auto
+        .logo-title
+            font-size: 1rem
+            margin: 0px 0px 0px 4rem
+    .menu-container
+        margin: 0px 0px 0px auto
+        display: flex
+        align-content: flex-end
+        flex-direction: row
+        flex-wrap: wrap
+        min-width: 40%
+        .menu
+            margin: auto 0px auto auto
+            .menu-list
+                display: flex
+                flex-direction: row
+                justify-content: center
+                flex-wrap: wrap
+                +breakpoint($breakpoint-sm)
+                    display: none
+                margin: 0px
+                li, .menu-item
+                    padding: 0.2rem 0.3rem 
+                    margin: 0px 0.1rem
+                    a, .menu-link
+                        color: var(--cfont) !important
+                        &::after
+                            display: table
+                            margin: 0px auto 0
+                            width: 0%
+                            height: 2px
+                            background-color: var(--cprimary) 
+                            content: ""
+                            +transition(0.4s)
+                        &:hover
+                            &::after
+                                width: 80%
+                    
+        .search-container
+            position: relative
+            width: 40px
+            height: 30px
+            margin: 0.2rem 0px 0.2rem auto
+            .search-bar
+                position: absolute
+                right: 0px
+                top: 0px
+                display: block
+                background-color: var(--cobject)
+                border-radius: 50px
+                transition: 0.4s
+                width: 35px
+                height: inherit
+                &:hover, &:focus-within
+                    width: 210px
+                    .search-input
+                        width: 75%
+                .search-input
+                    background: none
+                    outline: none
+                    border-left: none
+                    border-right: none
+                    border-top: none
+                    border-bottom-width: 1px
+                    padding: 0px
+                    color: var(--cobjectfont)
+                    transition: 0.4s
+                    line-height: 1.5rem
+                    margin: 3px 0px 3px 13px
+                    width: 0px
+                .search-button
+                    position: absolute
+                    right: 0.4rem
+                    top: 50%
+                    transform: translateY(-50%)
+                    border-width: 0px
+                    background-color: transparent
+                    i
+                        color: var(--cobjectfont)
+                        font-size: 0.8rem
+                        &:hover
+                            color: var(--cprimary)
+
+    .menu-toggle-container
+        display: none
+        margin-top: 0.3rem
+        +breakpoint($breakpoint-sm)
+            display: block
+        &:focus-within
+            .menu-toggle
+                max-height: 10rem
+                border: 2px solid var(--cobjectdark)
+                border-radius: 10px
+            .menu-toggle-button
+                i
+                    color: var(--cprimary)
+        .menu-toggle-button
+            display: block
+            padding: 0px
+            margin: 0px .3rem 0px 1rem
+            border-width: 0px
+            background-color: transparent
+            +transition(1s)
+            transition-property: height
+            i
+                color: var(--cobject)
+                font-size: 1.5rem
+                padding: 0px
+        .menu-toggle
+            z-index: 1
+            display: flex
+            flex-direction: column
+            position: absolute
+            width: 60%
+            margin: 0.3rem auto
+            right: 0px
+            max-height: 0px
+            overflow: scroll
+            +transition(1s)
+            background-color: var(--cbackground)
+            .menu-list
+                display: flex
+                flex-direction: column
+                li, .menu-item
+                    border-bottom: 2px solid var(--cobjectdark)
+                    &:hover, &:focus
+                        background-color: var(--cobject)
+                        a, .menu-link
+                            color: var(--cprimary) !important
+                    a, .menu-link
+                        padding: 0.5rem auto    
+                        color: var(--cfont) !important

@@ -1,0 +1,21 @@
+@import organisms/background
+    
+.body-container
+    @extend background-default
+    .main-container
+        min-height: calc(50vh)
+        .about-content
+            margin: 10px auto
+            width: 80%
+            min-height: 400px
+            background-color: var(--cbackground)
+            border-radius: 20px
+            .about-name
+                font-size: 3rem
+                text-shadow: 2px 2px 5px var(--cdefault)
+                color: var(--cprimarydark)
+                text-align: center
+            .about-text
+                padding: 0.2rem 2rem
+                text-align: justify
+                

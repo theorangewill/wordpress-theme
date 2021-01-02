@@ -1,0 +1,14 @@
+.container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    .form-container
+        td
+            input
+                display: block !important
+        tr
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3)
+            &::first-child
+                border-top: 1px solid rgba(0, 0, 0, 0.3)
+            .form-item
+                margin-top: 0.3rem
+                display: block

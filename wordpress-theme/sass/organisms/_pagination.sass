@@ -1,0 +1,29 @@
+.pagination
+    padding-top: 1rem
+    justify-content: center
+    .page-item
+        .page-link
+            color: var(--cprimarydark)
+            border: 1px solid var(--cbackground)
+            padding: 0.2rem 0.5rem
+            &:hover
+                background-color: var(--cprimary)
+                border-color: var(--cprimarydark)
+                color: white !important
+        &.disabled 
+            .page-link
+                color: var(--cprimarydark)
+        &.active 
+            .page-link
+                background-color: var(--cprimary)
+                border-color: var(--cprimarydark)
+                color: white !important
+        
+        .page-ellipsis
+            color: black
+            border: 1px solid var(--cbackground)
+            padding: 0.2rem 0.2rem
+            &:hover
+                background-color: white
+                border: 1px solid var(--cbackground)
+                color: black !important

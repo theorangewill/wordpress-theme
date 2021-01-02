@@ -1,0 +1,138 @@
+@import ../molecules/form
+.post-comments
+    width: 100%
+    position: relative
+    background-color: var(--cobjectdark)
+    margin: 50px 0px 20px 0px
+    border-radius: 5px
+    padding: 10px
+    color: var(--cobjectdarkfont)
+    
+    .comment-reply-title
+        margin: 0.4rem 0
+        margin-top: 1rem
+        font-size: 0.8rem
+        background-color: var(--cbackground)
+        border-radius: 5px
+    .logged-in-as
+        margin: 0.4rem 0
+        font-size: 0.8rem
+        background-color: var(--cbackground)
+        border-radius: 5px 
+    .post-comments-header
+        color: var(--cobjectdarkfont)
+        i
+            color: var(--cobjectdarkfont)
+    .post-comments-body
+        &.ativo
+            opacity: 1
+            max-height: 50rem
+            overflow-y: scroll
+        +transition(2s)
+        opacity: 0
+        max-height: 0
+        overflow: hidden
+        .post-comment
+            position: relative
+            background-color: var(--cobject)
+            width: 95%
+            margin: 1rem auto
+            padding: 1rem 1rem
+            border-radius: 5px
+            font-family: $font-second
+            color: var(--cobjectfont)
+            .post-comment-name
+                font-size: 1.1em
+                color: var(--cobjectfont)
+            .post-comment-date
+                position: absolute
+                right: 0.5rem
+                top: 0.5rem
+                font-size: 0.5rem
+                font-weight: $bold
+                color: var(--cobjectfont)
+            .post-comment-text
+                font-size: 0.8rem
+                text-align: justify
+                text-justify: inter-word
+                color: var(--cobjectfont)
+            .post-comment-reply-icon
+                position: absolute
+                right: 0.5rem
+                bottom: 0px
+                i
+                    color: var(--cobjectfont)
+                    +transition(0.5s)
+                    &:hover
+                        color: var(--cprimary)
+            .children
+                position: relative
+                background-color: var(--cbackground)
+                margin: 1rem
+                border-radius: 5px
+                .post-comment-reply
+                    position: relative
+                    padding: 1rem 1rem
+                    border-top: 2px solid var(--cprimarydark)
+                    &:first-child
+                        border-top: none
+                    .post-comment-reply-name
+                        @extend .post-comment-name
+                        color: var(--cfont)
+                    .post-comment-reply-date
+                        @extend .post-comment-date
+                        color: var(--cfont)
+                    .post-comment-reply-text
+                        @extend .post-comment-text
+                        color: var(--cfont)
+            .post-comment-reply-new
+                &.ativo
+                    opacity: 1
+                    max-height: 1000px
+                +transition(2s)
+                opacity: 0
+                max-height: 0px
+                overflow: hidden
+    .pagination
+        justify-content: center
+        background-color: var(--cbackground)
+        border-radius: 10px
+        width: 30%
+        margin: 0 auto
+        .page-item
+            padding: 0 0.4rem
+    .post-comment-add
+        &.ativo
+            position: relative
+            top: 0px
+            right: 0px
+            -webkit-transform:
+        position: absolute
+        right: 1rem
+        top: 0.7rem
+        i
+            +transition(0.5s)
+            color: var(--cobjectdarkfont)
+            &:hover
+                color: var(--cprimarydark)
+
+    .post-comment-new
+        &.ativo-new
+            opacity: 1
+            max-height: 1000px
+        +transition(2s)
+        opacity: 0
+        max-height: 0px
+        overflow: hidden
+
+    .post-comments-body::-webkit-scrollbar 
+        width: 0.5rem
+        background-color: #F5F5F5
+    .post-comments-body::-webkit-scrollbar-track
+        border-radius: 0px
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+        background-color: var(--cscrollbar-track)
+    .post-comments-body::-webkit-scrollbar-thumb
+        border-radius: 10px
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+        background-color: var(--cscrollbar-thumb)

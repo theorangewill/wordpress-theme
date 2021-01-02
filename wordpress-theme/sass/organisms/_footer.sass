@@ -1,0 +1,45 @@
+.footer-container
+    background-color: var(--cfooter-background)
+    position: relative
+    width: 100%
+    min-height: 50px
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    .logo
+        width: 20%
+        height: inherit
+        object-fit: cover
+        +breakpoint($breakpoint-md)
+            display: none
+    .footer-rights
+        position: absolute
+        bottom: 0.1rem 
+        right: 1rem
+        color: var(--cfont)
+        font-size: 0.8rem
+        font-family: $font-second
+        +breakpoint($breakpoint-md)
+            position: relative
+            margin: auto auto
+            right: 0
+            bottom: 0
+    .menu
+        width: 70%
+        margin: 2em
+        +breakpoint($breakpoint-md)
+            display: none
+        .menu-list
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: center
+            li, .menu-item
+                margin: 0 40px 0 0
+                a, .menu-link
+                    text-transform: uppercase
+                    color: var(--cinverse) !important
+                    font-size: 1em
+                    font-weight: $light
+                    &:hover
+                        color: var(--cprimary) !important

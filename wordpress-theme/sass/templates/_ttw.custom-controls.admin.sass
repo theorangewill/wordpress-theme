@@ -1,0 +1,52 @@
+
+
+
+.text_radio_button_control
+    &:after
+        content: ""
+        display: block
+        clear: both
+    .radio-buttons
+        display: inline-block
+        border: 0px
+        background-color: rgba(0, 0, 0, 0)
+    .radio-button-label
+        cursor: pointer
+        float: left
+        border-radius: 20px
+        margin: 1px
+        input
+            display: none
+            &:checked
+                + span
+                    border: 3px solid rgb(0, 0, 0)
+                    &:hover
+                        opacity: 0.9
+        span
+            cursor: pointer
+            border-radius: 20px
+            border: 1px solid rgba(0, 0, 0, .7)
+            margin: 0 
+            background-color: inherit
+            padding: 10px
+            display: inline-block
+            &:hover
+                opacity: 0.7
+        .orange
+            background-color: #ff7700
+        .blue
+            background-color: #0077ff
+        .green
+            background-color: #0dff00
+        .red
+            background-color: #ff4000
+        .yellow
+            background-color: #ffbb00
+        .turquoise
+            background-color: #00d9ff
+        .pink
+            background-color: #ff00b3
+        .purple
+            background-color: #6600ff
+        .magenta
+            background-color: #ee00ff

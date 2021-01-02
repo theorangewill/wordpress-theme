@@ -1,0 +1,166 @@
+@import ../molecules/mixins
+
+
+
+html
+  --cbackground: #a8a8a8
+  --cbackground: #e0e0e0
+  --cpostbackground: #a8a8a8
+  --cfont: #282829
+  --cpostfont: #414141
+  --cobject: #6b6b6b
+  --cobjectdark: #474747
+  --cobjectfont: #bdbdbd
+  --cobjectdarkfont: #c9c9c9
+  --cdefault: #ffffff 
+  --cinverse: #000000
+  --cheader-background: #ededed
+  --cfooter-background: #bfbfbf
+  --cscrollbar-track: #dfdfdf
+  --cscrollbar-thumb: #747474
+  --csidebar-background: #ededed
+  --csidebar-font: #282829
+  --cpagebackground: #7d7d7d
+  --cpagebackgroundpoints: #4f4f4f
+  --ccards-text: #cccccc
+  --ccards-background-rgb: 59, 59, 59
+
+html[data-theme='dark']
+  --cbackground: #474747
+  --cpostbackground: #757575
+  --cfont: #a6a6a6
+  --cpostfont: #292929
+  --cobject: #cccccc
+  --cobjectdark: #242424
+  --cobjectfont: #212529
+  --cobjectdarkfont: #c9c9c9
+  --cdefault: #000000 
+  --cinverse: #ffffff
+  --cheader-background: #6b6b6b
+  --cfooter-background: #4a4a4a
+  --cscrollbar-track: #6d6d6d
+  --cscrollbar-thumb: #222222
+  --csidebar-background: #9e9e9e
+  --csidebar-font: #222222
+  --cpagebackground: #4f4f4f 
+  --cpagebackgroundpoints: #7d7d7d
+  --ccards-text: #242424
+  --ccards-background-rgb: 201, 201, 201
+
+html
+  --cprimary: hsl(28, 100%, 50%) // #FF7700 255, 119, 0                     28, 100%, 50%
+  --cprimarylight: hsl(28, 100%, 55%)//#{lighten($colorprimary, 10%)} // #F89132 248, 145, 50  29, 80%, 58%
+  --cprimarydark: hsl(28, 100%, 45%) // #E66C25 230, 108, 37     22, 84%, 52%
+  --ccards-title: hsl(28, 100%, 40%) // #CC601F 204, 96, 31     23, 85%, 46%
+
+html[data-color='orange']
+  --cprimary: hsl(28, 100%, 50%)
+  --cprimarylight: hsl(28, 100%, 55%)
+  --cprimarydark: hsl(28, 100%, 45%)
+  --ccards-title: hsl(28, 100%, 40%)
+
+html[data-color='blue']
+  --cprimary: hsl(212, 100%, 50%)
+  --cprimarylight: hsl(212, 100%, 55%)
+  --cprimarydark: hsl(212, 100%, 45%)
+  --ccards-title: hsl(212, 100%, 40%)
+
+html[data-color='green']
+  --cprimary: hsl(117, 100%, 50%)
+  --cprimarylight: hsl(117, 100%, 55%)
+  --cprimarydark: hsl(117, 100%, 45%)
+  --ccards-title: hsl(117, 100%, 40%)
+
+
+html[data-color='red']
+  --cprimary: hsl(15, 100%, 50%)
+  --cprimarylight: hsl(15, 100%, 55%)
+  --cprimarydark: hsl(15, 100%, 45%)
+  --ccards-title: hsl(15, 100%, 40%)
+
+
+html[data-color='yellow']
+  --cprimary: hsl(44, 100%, 50%)
+  --cprimarylight: hsl(44, 100%, 55%)
+  --cprimarydark: hsl(44, 100%, 45%)
+  --ccards-title: hsl(44, 100%, 40%)
+
+
+html[data-color='turquoise']
+  --cprimary: hsl(189, 100%, 50%)
+  --cprimarylight: hsl(189, 100%, 55%)
+  --cprimarydark: hsl(189, 100%, 45%)
+  --ccards-title: hsl(189, 100%, 40%)
+
+html[data-color='pink']
+  --cprimary: hsl(318, 100%, 50%)
+  --cprimarylight: hsl(318, 100%, 55%)
+  --cprimarydark: hsl(318, 100%, 45%)
+  --ccards-title: hsl(318, 100%, 40%)
+
+html[data-color='purple']
+  --cprimary: hsl(264, 100%, 50%)
+  --cprimarylight: hsl(264, 100%, 55%)
+  --cprimarydark: hsl(264, 100%, 45%)
+  --ccards-title: hsl(264, 100%, 40%)
+
+
+html[data-color='magenta']
+  --cprimary: hsl(296, 100%, 50%)
+  --cprimarylight: hsl(296, 100%, 55%)
+  --cprimarydark: hsl(296, 100%, 45%)
+  --ccards-title: hsl(296, 100%, 40%)
+
+html
+  --cprimarya: hsl(var(--cprimaryh), var(--cprimarys), var(--cprimaryl)) // #FF7700 255, 119, 0                     28, 100%, 50%
+  --cprimaraylight: hsl(var(--cprimaryh), var(--cprimarys), calc(var(--cprimaryl) + 5%))//#{lighten($colorprimary, 10%)} // #F89132 248, 145, 50  29, 80%, 58%
+  --cprimaarydark: hsl(var(--cprimaryh), var(--cprimarys), calc(var(--cprimaryl) - 5%)) // #E66C25 230, 108, 37     22, 84%, 52%
+  --ccardas-title: hsl(var(--cprimaryh), var(--cprimarys), calc(var(--cprimaryl) - 10%)) // #CC601F 204, 96, 31     23, 85%, 46%
+
+
+body
+  font-family: $font-main, sans-serif !important
+  font-weight: $normal
+  line-height: 1
+  strong
+    font-weight: $bold
+
+  
+html, body, div, span, applet, object, iframe, button, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  display: block
+  color: var(--cfont)
+  vertical-align: baseline
+  -webkit-font-smoothing: antialiased
+  word-wrap: break-word
+
+h2
+  font-weight: $bold
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+
+ul
+  list-style: none
+
+a
+  +transition(.5s)
+  color: var(--cprimary) !important
+  display: inline
+  &:hover
+    text-decoration: none !important
+    color: var(--cprimarylight) !important
+  &:focus
+    text-decoration: none !important
+    color: var(--cprimarydark) !important
+
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+.body-container
+  flex: 1

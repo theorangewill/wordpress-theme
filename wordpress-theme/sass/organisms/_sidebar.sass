@@ -1,0 +1,69 @@
+
+.sidebar-default
+    float: right
+    .post-sidebar-content
+        z-index: 1
+        position: fixed
+        +breakpoint($breakpoint-smartphone)
+            top: 3rem
+        +transition(2s)
+        .post-sidebar-circle
+            position: absolute
+            top: 3rem
+            height: 2rem
+            width: 1.5rem
+            background-color: var(--csidebar-background)
+            border: 0.1rem solid var(--cobjectdark)
+            i
+                position: absolute
+                left: 50%
+                top: 50%
+                -webkit-transform: translate(-50%, -50%)
+                color: var(--csidebar-font)
+                &:hover
+                    color: var(--cprimarydark)
+        .post-sidebar-contents-title
+            background-color: var(--cobjectdark)
+            color: var(--cobjectdarkfont)
+            margin-top: 0.3rem
+            height: 1.5rem
+            text-align: center
+        .post-sidebar-contents-list
+            width: 100%
+            max-height: 30vh
+            background-color: var(--csidebar-background)
+            border-color: var(--cobjectdark)
+            border-width: 5px
+            padding: 0.4rem
+            overflow: auto
+            .current
+                font-weight: $bold
+            .post-sidebar-contents-item
+                display: block
+                color: var(--csidebar-font) !important
+                line-height: 0.8rem
+                padding: 0.3rem 0
+                +transition(0.3s)
+                &:hover
+                    color: var(--cprimarydark) !important
+            .post-sidebar-contents-subitem
+                display: block
+                font-size: 0.8rem
+                line-height: 0.6rem
+                padding-left: 1rem
+                line-height: 1rem
+                color: var(--csidebar-font) !important
+                +transition(0.3s)
+                &:hover
+                    color: var(--cprimarydark) !important
+        .post-sidebar-contents-list::-webkit-scrollbar 
+            width: 12px
+            background-color: #F5F5F5
+        .post-sidebar-contents-list::-webkit-scrollbar-track
+            border-radius: 0px
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+            background-color: var(--cscrollbar-track)
+        .post-sidebar-contents-list::-webkit-scrollbar-thumb
+            border-radius: 10px
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+            background-color: var(--cscrollbar-thumb)

@@ -1,0 +1,22 @@
+.main-header
+    width: 100%
+    background-color: var(--cbackground)
+    position: relative
+    .main-header-content
+        padding: 1rem 5rem
+        .main-header-title
+            text-align: center
+            font-size: 3rem
+            text-shadow: 2px 2px 7px var(--cdefault)
+            color: var(--cprimary)
+            +breakpoint($breakpoint-md)
+                font-size: 2rem
+            +breakpoint($breakpoint-smartphone)
+                font-size: 1.5rem
+        .main-header-subtitle
+            text-align: justify
+            line-height: 1rem !important
+            padding-top: 1rem
+            text-justify: inter-word
+            font-weight: $light
+            color: var(--cfont)
