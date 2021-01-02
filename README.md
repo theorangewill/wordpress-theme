@@ -61,7 +61,7 @@ This is the template for the comments:
 
 ### Lessons
 
-The lessons has a summary of all the lessons of a subject.
+The lessons have a summary of all the lessons of a subject.
 
 ![post lessons](/img/lessonspost.png)
 
