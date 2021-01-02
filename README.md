@@ -59,6 +59,13 @@ This is the template for the comments:
 
 ![post comments](/img/comments.png)
 
+### Lessons
+
+The lessons has a summary of all the lessons of a subject.
+
+![post lessons](/img/lessonspost.png)
+
+
 ### Page
 
 Page is another default Wordpress post type and has a simple template:
