@@ -1,37 +1,39 @@
 # Wordpress theme
 
-This a Wordpress theme that I made to learn web development. I learned HTML, CSS, php and Wordpress, and discovered tools like npm, gulp, sass, Wordpress plugins and others.
+This is a Wordpress theme that I made to learn web development. I learned HTML, CSS, php and Wordpress, and discovered tools like npm, gulp, sass, Wordpress plugins and others.
 
-This template have a blog style with a lesson topology.
+This template has a blog style with a lesson topology.
+
+## Home
 
 The home page has a simple menu and a category menu with huge images.
 The posts is a catalog using [Masonry tool](https://masonry.desandro.com/).
 
 ![home page](/img/homepage.png)
 
-The category menu is customized in the Wordpress menu Theme Custom > Categories Menu.
+The categories menu is customized in the Wordpress Theme Custom> Categories Menu.
 ![category menu](/img/menuoptions.png)
 
 ## Categories and lessons
 
-The theme as the classic post type and a custom type called lessons.
-The classic post have two taxonomies: category and tag. While the lessons has: subject and tag.
+The theme has the classic post type and a custom type called lessons.
+The classic post have two taxonomies: category and tag. While the lessons have: subject and tag.
 
-A category have children categories.
-Below there is the page for the categories without parent. This page has a title and description of the category, followed by a catalog of children categories, that have images. 
+A category has children categories.
+Below is the page of the categories without parent. This page has a title and description of the category, followed by a catalog of children categories, that have images.
 ![parent category page](/img/categorypage.png)
 
-The children have the template below. This page shows the posts with this category. In the header, there is parent category (canto superior esquerdo) and embaixo the children categories. In the example, the page is for the IA category, which is a child of Computing and has Neural Network as child.
+The children have the template below. This page shows posts with this category. In the header, there is the parent category (upper left corner) and below the children categories. In the example, the page is for the IA category, which is a child of Computing and has Neural Network as a child.
 ![children category page](/img/categorychildrenpage.png)
 
-Lessons has the same templates.
+Lessons have the same templates.
 
 ## Posts
 
-The post have the template below. It has a title, description, the text and a footer. As the end of the the text, 
+The post has the template below. It has title, description, the text and footer.
 ![post page](/img/postpage.png)
 
-The footer have references, list of tags, the publish and update dates, and the author. The author has a popover that shows a description.
+The footer contains references, list of tags, the publication and update dates, and the author. The author has a popover that shows a description.
 ![post footer](/img/postfooter.png)
 
 It is possible to create a table of contents.
@@ -45,12 +47,12 @@ Another commmand is the popover tip.
 ![post text tip](/img/texttip.png)
 ![post text tip](/img/texttipcommand.png)
 
-This is the template for the comments.
+This is the template for the comments:
 ![post comments](/img/comments.png)
 
 ### Page
 
-Page is another default post type from Wordpress and has a simple template:
+Page is another default Wordpress post type and has a simple template:
 ![page](/img/page.png)
 
 
@@ -62,7 +64,7 @@ The search page is similar to the others.
 
 ## Author
 
-Each author has a page with information about they. The page has an avatar, a description, an email image and links to the social media. The user can add Interests and Experiences. Also it is showed a list of tags and posts that the author wrote. 
+Each author has a page with information about them. The page has an avatar, description, email image and links. The user can add Interests and Experiences. A list of tags and posts that the author has written are also shown.
 ![author page](/img/authorpage.png)
 
 The admin can change the name and the box information in the Wordpress menu Theme Options > Options.
@@ -78,6 +80,6 @@ The description is shown as:
 
 ## Customize
 
-The admin can also use the Customize from Wordpress to alter colors and header and footer logo. 
+The admin can also use the Wordpress Customize to alter colors, and header and footer logo. 
 ![customize](/img/customize.png)
 
